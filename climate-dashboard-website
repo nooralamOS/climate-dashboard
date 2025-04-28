@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Impact Dashboard - Project Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .section-title {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+            margin-top: 30px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .results table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .results th, .results td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Climate Impact Dashboard - Project Overview</h1>
+</header>
+
+<div class="container">
+    <section class="intro">
+        <h2>Introduction</h2>
+        <p> As the DAFRE climate dashboard team, our project was to investigate some “not so obvious” 
+            effects of climate change and ideally inform the general NJ residents through a simple dashboard. 
+            For this project, as a team, we split up into multiple subteams to focus on a couple of different main ideas, 
+            such as Lyme disease, water contamination, and AQI. After splitting up, we spent a lot of time gathering 
+            and cleaning up data on these topics. Some topics required a mix of multiple different datasets, and some just 
+            required a lot of cleaning up since the data sets were sometimes up 10s of thousands of lines or even 100s of thousands of lines. 
+            We then went into a more exploratory phase where we used coding languages such as Python and R in order to derive meaningful insights 
+            from these datasets and hopefully come up with good correlations to show the adverse effects of “rising temperatures” or climate change. 
+            Below we mentioned the main topics we worked on for this project and have detailed explanations of the work done for them. 
+        </p>
+    </section>
+
+    <section class="section-title">
+        <h2>Lyme Disease Analysis</h2>
+    </section>
+    <div class="content">
+        <p>To understand whether Lyme disease is affected by global warming and 
+            increased temperatures in New Jersey, we used Lyme disease data from the New Jersey 
+            Department of Health (doh.nj.gov). After encountering compatibility issues with several other 
+            Lyme disease datasets, this New Jersey-specific, county-wise data provided us with more precise information. 
+            Along with this large dataset, we also worked with a monthly dataset, which included one data point averaged 
+            over the years 2008 to 2022 for each month, as well as another dataset containing all the monthly average temperatures.</p>
+    
+        <p>We initially focused on cleaning the datasets, ensuring they were New Jersey-specific, and filtering them to
+             retain metrics that would help us identify meaningful correlations later on.</p>
+    
+        <h3>Key Findings</h3>
+        <p> One interesting thing we found was that, in general, the summer months like June, July, 
+            and August were when Lyme disease cases were higher than in other months. However, an interesting 
+            observation to note is that in August there is a noticeable dip in Lyme disease cases compared to June and July,
+             even though August can be just as hot. After further research, we found that this decline could be attributed to a 
+             combination of factors, including reduced daylight hours affecting tick activity cycles, seasonal changes in tick 
+             breeding patterns, and other environmental stressors such as humidity and habitat conditions that may limit 
+             tick mobility and host-seeking behavior during this period.</p>
+            
+            <h3>Correlation between Temperature and Lyme Disease Cases (2008-2022)</h3>
+    <p><strong>Correlation coefficient: 0.7822</strong><br> 
+    *This r value suggests a strong correlation between the high temperature months and higher Lyme disease cases.</p>
+
+    <img src="https://drive.google.com/uc?export=view&id=1wEHttZ9hiHYuNKj4d4L54tlpdHGOvYAr" alt="Impact of Temperature on Monthly Lyme Disease Cases" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+
+    <p>Next, we tried to do more data analytics in order to find correlations between annual Lyme disease 
+        cases and annual temperatures. However, finding a consistent correlation proved to be extremely difficult 
+        with Lyme disease cases in particular, due to the complex behavior patterns of ticks, their sensitivity 
+        to multiple environmental factors beyond temperature alone (like humidity, vegetation, and host availability), 
+        and geographical differences even within a small state like New Jersey that could cause significant 
+        inconsistencies in the data. To still explore the effect of temperature on Lyme disease cases over the 
+        years we had available, we normalized the number of Lyme disease cases and the temperatures to better observe 
+        any trends. We also decided to exclude years after 2019, since COVID tended to cause a lot of discrepancies in the 
+        results. In the graph below, the correlation ended up being around 0.305, indicating that there might not be a direct correlation. 
+        However, if we had data on Lyme disease cases from the 1900s, the trends could have been much clearer, but due to limitations in 
+        available datasets as well as the complexities that follow the study of ticks and Lyme disease, there wasn’t an
+         exact correlation indicating a direct effect of temperature on Lyme disease.</p>
+
+    <img src="https://drive.google.com/uc?export=view&id=1NqDQr-QPyw0os8xFIQxVRRBohvSJhZRc" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+    </div>
+
+    <section class="section-title">
+        <h2>Water Contamination</h2>
+    </section>
+    <div class="content">
+        <p>
+            <h3>AQI Analysis</h3>
+
+            <p>We used the air quality data from <a href="https://www.epa.gov/" target="_blank">epa.gov</a>, and 
+                correlated different measures from it with average annual temperature. Measures included:</p>
+            <ul>
+                <li>Avg. Max AQI</li>
+                <li>Avg. Median AQI</li>
+                <li>Avg Number of Good Days</li>
+                <li>Avg Number of Bad Days</li>
+            </ul>
+        
+            <p>The time frame we chose was <strong>[2000, 2018]</strong>. We selected this period because the AQI dataset 
+                was only complete starting in 1996, so we decided on 2000 as the standard year to begin our analysis. We chose 
+                2018 as the last year of analysis in order to achieve more general results, as the years 2019-2022 are considered 
+                abnormal, particularly regarding pollution metrics, due to the Covid-19 pandemic.</p>
+        
+            <p>To clean the data, we first narrowed the dataset down to New Jersey only, then we took the average across 
+                all counties to get an average for NJ. Additionally, we used the same temperature dataset from the Lyme 
+                disease analysis, following the same data cleaning procedure. <strong>NOTE:</strong> All values were normalized for 
+                graphing and correlation testing.</p>
+        
+            <h3>Results</h3>
+            <p><strong>Max AQI vs Annual Temperature (2000-2018) in NJ</strong></p>
+            <p>Correlation coefficient: <strong>0.039183723498972214</strong><br>
+            P-value: <strong>0.8734616981432508</strong></p>
+            <p>
+                The correlation is not statistically significant at 0.1 level as p-value is high. This shows that the correlation we found for these 2 data points is likely due to chance.
+            </p>
+
+            <img src="https://drive.google.com/uc?export=view&id=1tq6axJDtClElaeTQKxwEycTpzEMCivHt" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+        
+
+            
+            <p><strong>Median AQI vs Annual Temperature (2000-2018) in NJ</strong></p>
+            <p>Correlation coefficient: <strong>0.6493577035065651</strong><br>
+            P-value: <strong>0.002624068801717691</strong></p>
+            <p>
+                The correlation is statistically significant at 0.1 level as p-value is small. This shows that the correlation we found for these 2 data points is likely not due to chance.
+            </p>
+
+            <img src="https://drive.google.com/uc?export=view&id=1yZgyBzcb_Wu0OK2IvYTOazkZizEi2hzJ" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+        
+
+            <h3>Avg. Pct Good Days vs Annual Temperature (2000-2018) in NJ</h3>
+            <p><strong>Correlation coefficient:</strong> -0.4097310715637007<br>
+            <strong>P-value:</strong> 0.08147995122334573</p>
+            <p>The correlation is statistically significant at the 0.1 level as the p-value is lower than 0.1. 
+                This means that there is a high chance that our correlation is not due to chance.</p>
+
+            <img src="https://drive.google.com/uc?export=view&id=1j8CnSHhFxdFAKVyhqAZIH22wt97n1dsL" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+
+        
+            <h3>Avg. Pct Bad Days vs Annual Temperature (2000-2018) in NJ</h3>
+            <p><strong>Bad days</strong> are aggregated as unhealthy for sensitive days + unhealthy days + very unhealthy days + hazardous days.</p>
+            <p><strong>Correlation coefficient:</strong> 0.16117103250136192<br>
+            <strong>P-value:</strong> 0.5097897959987064</p>
+            <p>The correlation is not statistically significant at the 0.1 level as the p-value is high. This means that our correlation here is likely due to chance and not a real effect.</p>
+        
+            <img src="https://drive.google.com/uc?export=view&id=1S9fRRr23Yfh3tnEEdJFMH6lXpHebwtQF" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+
+
+            <h3>Additional Analysis</h3>
+            <p>In addition, there is also code in the notebook where we used a 1-10 year delay for all the analyses above to introduce a time delay. 
+                The results were not statistically significant for those cases.
+                Lastly, we also broke down each of the analyses above by county instead of using the state average. 
+                The results were not much better than those from the state average.</p>
+        
+        </section>
+        <div class="content">
+            <div class="results">
+                <h3>Results Summary</h3>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Correlation Coefficient</th>
+                        <th>P-value</th>
+                    </tr>
+                    <tr>
+                        <td>Max AQI vs Annual Temperature</td>
+                        <td>0.039</td>
+                        <td>0.87</td>
+                    </tr>
+                    <tr>
+                        <td>Median AQI vs Annual Temperature</td>
+                        <td>0.649</td>
+                        <td>0.0026</td>
+                    </tr>
+                    <tr>
+                        <td>Avg Pct Good Days vs Annual Temperature</td>
+                        <td>-0.409</td>
+                        <td>0.081</td>
+                    </tr>
+                    <tr>
+                        <td>Avg Pct Bad Days vs Annual Temperature</td>
+                        <td>0.161</td>
+                        <td>0.51</td>
+                    </tr>
+                </table>
+                <p>The results showed mixed correlations. For instance, the Median AQI and Avg Pct Good Days were statistically significant, while others were not.</p>
+            </div>
+        </div>
+
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
