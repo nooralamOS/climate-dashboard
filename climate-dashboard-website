@@ -107,7 +107,7 @@
     <p><strong>Correlation coefficient: 0.7822</strong><br> 
     *This r value suggests a strong correlation between the high temperature months and higher Lyme disease cases.</p>
 
-    <img src="https://drive.google.com/uc?export=view&id=1wEHttZ9hiHYuNKj4d4L54tlpdHGOvYAr" alt="Impact of Temperature on Monthly Lyme Disease Cases" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+    <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image6.png" alt="Impact of Temperature on Monthly Lyme Disease Cases" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
 
     <p>Next, we tried to do more data analytics in order to find correlations between annual Lyme disease 
         cases and annual temperatures. However, finding a consistent correlation proved to be extremely difficult 
@@ -122,7 +122,7 @@
         available datasets as well as the complexities that follow the study of ticks and Lyme disease, there wasn’t an
          exact correlation indicating a direct effect of temperature on Lyme disease.</p>
 
-    <img src="https://drive.google.com/uc?export=view&id=1NqDQr-QPyw0os8xFIQxVRRBohvSJhZRc" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+    <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image5.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
     </div>
 
     <section class="section-title">
@@ -159,7 +159,7 @@
                 The correlation is not statistically significant at 0.1 level as p-value is high. This shows that the correlation we found for these 2 data points is likely due to chance.
             </p>
 
-            <img src="https://drive.google.com/uc?export=view&id=1tq6axJDtClElaeTQKxwEycTpzEMCivHt" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+            <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image4.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
         
 
             
@@ -170,7 +170,7 @@
                 The correlation is statistically significant at 0.1 level as p-value is small. This shows that the correlation we found for these 2 data points is likely not due to chance.
             </p>
 
-            <img src="https://drive.google.com/uc?export=view&id=1yZgyBzcb_Wu0OK2IvYTOazkZizEi2hzJ" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+            <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image2.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
         
 
             <h3>Avg. Pct Good Days vs Annual Temperature (2000-2018) in NJ</h3>
@@ -179,7 +179,7 @@
             <p>The correlation is statistically significant at the 0.1 level as the p-value is lower than 0.1. 
                 This means that there is a high chance that our correlation is not due to chance.</p>
 
-            <img src="https://drive.google.com/uc?export=view&id=1j8CnSHhFxdFAKVyhqAZIH22wt97n1dsL" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+            <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image3.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
 
         
             <h3>Avg. Pct Bad Days vs Annual Temperature (2000-2018) in NJ</h3>
@@ -188,7 +188,7 @@
             <strong>P-value:</strong> 0.5097897959987064</p>
             <p>The correlation is not statistically significant at the 0.1 level as the p-value is high. This means that our correlation here is likely due to chance and not a real effect.</p>
         
-            <img src="https://drive.google.com/uc?export=view&id=1S9fRRr23Yfh3tnEEdJFMH6lXpHebwtQF" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+            <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image1.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
 
 
             <h3>Additional Analysis</h3>
