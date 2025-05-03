@@ -129,8 +129,60 @@
         <h2>Water Contamination</h2>
     </section>
     <div class="content">
+
+        <h3>Methodology</h3>
+        <p>The analysis leveraged <strong>R</strong> to investigate relationships between environmental variables (temperature, 
+            rainfall) and incidents (floods, nitrate levels) in New Jersey. Datasets from <strong>FEMA</strong> (flood claims), 
+            historical temperature records (1977–2024), and nitrate measurements (2009–2024) were processed using <strong>dplyr</strong> 
+            and <strong>lubridate</strong> for aggregation (daily, monthly, yearly). Statistical models, including <strong>Poisson</strong> 
+            and <strong>Negative Binomial regressions</strong>, identified seasonal trends, while <strong>correlation analyses</strong> 
+            (Pearson, Spearman) quantified associations. Data normalization enabled direct comparison of variables like temperature and flood 
+            'incidents. <strong>Visualizations</strong> (ggplot2, gridExtra) highlighted temporal patterns and regional disparities. <strong>County-level 
+                mappings</strong> and <strong>hurricane-linked September data</strong> were prioritized to uncover localized climate impacts.</p>
+
+        <h3>Results</h3>
+
+        <h4>1. Strong Localized Correlations Between Temperature and Floods</h4>
+        <p>While the global correlation between temperature and flood incidents was weak (<em>r = 0.179</em>), <strong>Sussex 
+            County</strong> emerged as a hotspot with a striking positive correlation (<em>r = 0.427</em>), likely due to its 
+            topography, where warmer temperatures accelerate snowmelt in mountainous areas, increasing riverine flooding. 
+            Similarly, <strong>Bergen County</strong> (<em>r = 0.303</em>) showed heightened flood risks in urbanized zones, 
+            where heat islands intensify stormwater runoff during heavy rains. These localized trends underscore the importance 
+            of regional climate resilience strategies, particularly in areas where temperature amplifies hydrological risks.</p>
+
+        <h4>2. Seasonal Peaks: Hurricanes and September Floods</h4>
+        <p><strong>September</strong> exhibited a unique positive relationship between temperature and flood incidents. 
+            Regression models revealed a +0.155 Poisson coefficient for temperature, escalating to +0.265 for late-month dates 
+            (24th–28th). This aligns with historical hurricane patterns, where warmer Atlantic waters in late September 
+            fuel storm intensity, disproportionately affecting coastal counties like <strong>Ocean</strong> and <strong>Monmouth</strong>. 
+            The late-month spike in incidents correlates with peak hurricane seasons, suggesting that rising temperatures could exacerbate 
+            autumn flood risks in vulnerable coastal regions.</p>
+
+        <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image7.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 1100px; margin-top: 20px; margin-left: 70px;">
+
+        <h4>3. Policy-Relevant Insights from Positive Trends</h4>
+        <p>The analysis identified actionable patterns:</p>
+        <ul>
+            <li><strong>Hunterdon County</strong> (<em>r = 0.305</em>), with its riverine networks, faces increased flood risks 
+                from temperature-driven snowmelt, necessitating upstream water management.</li>
+            <li>Urban areas like <strong>Bergen</strong> require upgraded drainage systems to counter heat-induced runoff.</li>
+            <li><strong>September’s temperature-flood link</strong> calls for preemptive hurricane preparedness in coastal zones.</li>
+        </ul>
+
+<p>These findings highlight the need for adaptive infrastructure and targeted climate policies in high-correlation regions, 
+    where temperature acts as a catalyst for environmental hazards.</p>
+
+
+
+    </div>
+
+    <section class="section-title">
+        <h2>AQI</h2>
+    </section>
+    <div class="content">
         <p>
-            <h3>AQI Analysis</h3>
+
+            <h3> Methodology </h3>
 
             <p>We used the air quality data from <a href="https://www.epa.gov/" target="_blank">epa.gov</a>, and 
                 correlated different measures from it with average annual temperature. Measures included:</p>
@@ -140,6 +192,18 @@
                 <li>Avg Number of Good Days</li>
                 <li>Avg Number of Bad Days</li>
             </ul>
+
+            <p> The analysis leveraged R to investigate relationships between environmental
+                     variables (temperature, rainfall) and incidents (floods, nitrate levels) in New Jersey. 
+                     Datasets from FEMA (flood claims), historical temperature records (1977–2024), and nitrate 
+                     measurements (2009–2024) were processed using dplyr and lubridate for 
+                     aggregation (daily, monthly, yearly). Statistical models, including Poisson and Negative Binomial
+                      regressions, identified seasonal trends, while correlation analyses (Pearson, Spearman) quantified associations. 
+                      Data normalization enabled direct comparison of variables like temperature and flood incidents. 
+                      Visualizations (ggplot2, gridExtra) highlighted temporal patterns and regional disparities. 
+                      County-level mappings and hurricane-linked September data were prioritized to uncover localized climate impacts. </p>
+
+            
         
             <p>The time frame we chose was <strong>[2000, 2018]</strong>. We selected this period because the AQI dataset 
                 was only complete starting in 1996, so we decided on 2000 as the standard year to begin our analysis. We chose 
@@ -156,7 +220,8 @@
             <p>Correlation coefficient: <strong>0.039183723498972214</strong><br>
             P-value: <strong>0.8734616981432508</strong></p>
             <p>
-                The correlation is not statistically significant at 0.1 level as p-value is high. This shows that the correlation we found for these 2 data points is likely due to chance.
+                The correlation is not statistically significant at 0.1 level as p-value is high. 
+                This shows that the correlation we found for these 2 data points is likely due to chance.
             </p>
 
             <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image4.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
@@ -167,7 +232,8 @@
             <p>Correlation coefficient: <strong>0.6493577035065651</strong><br>
             P-value: <strong>0.002624068801717691</strong></p>
             <p>
-                The correlation is statistically significant at 0.1 level as p-value is small. This shows that the correlation we found for these 2 data points is likely not due to chance.
+                The correlation is statistically significant at 0.1 level as p-value is small. 
+                This shows that the correlation we found for these 2 data points is likely not due to chance.
             </p>
 
             <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image2.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
@@ -186,7 +252,8 @@
             <p><strong>Bad days</strong> are aggregated as unhealthy for sensitive days + unhealthy days + very unhealthy days + hazardous days.</p>
             <p><strong>Correlation coefficient:</strong> 0.16117103250136192<br>
             <strong>P-value:</strong> 0.5097897959987064</p>
-            <p>The correlation is not statistically significant at the 0.1 level as the p-value is high. This means that our correlation here is likely due to chance and not a real effect.</p>
+            <p>The correlation is not statistically significant at the 0.1 level as the p-value is high. 
+                This means that our correlation here is likely due to chance and not a real effect.</p>
         
             <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image1.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
 
@@ -228,9 +295,24 @@
                         <td>0.51</td>
                     </tr>
                 </table>
-                <p>The results showed mixed correlations. For instance, the Median AQI and Avg Pct Good Days were statistically significant, while others were not.</p>
+                <p>The results showed mixed correlations. For instance, 
+                    the Median AQI and Avg Pct Good Days were statistically significant, while others were not.</p>
             </div>
         </div>
+
+        <p>
+            Finally, one last thing we created was a Dynamic Panel Model to predict a crude asthma 
+            rate (percentage) for all the different counties in NJ based on different features like AQI, 
+            smoking rates, and previous asthma rates. We discovered that the data available county-wise is 
+            extremely scarce, and we managed to only find around 11 years of data for each county. 
+            Due to this, our results cannot be considered reliable as the p-value for the model overall was much 
+            higher than expected. 
+        </p>
+
+        <p>Here are the results of the test:</p>
+
+        <img src="https://github.com/nooralamOS/climate-dashboard/raw/main/image8.png" alt="Normalized Comparison of Lyme Disease and Temperature" style="width: 100%; max-width: 800px; margin-top: 20px; margin-left: 160px;">
+
 
         </p>
     </div>
